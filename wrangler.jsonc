@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "swiftcart1",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "swiftcart1.com", "custom_domain": true },
+    { "pattern": "www.swiftcart1.com", "custom_domain": true }
+  ]
+}

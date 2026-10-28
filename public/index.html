@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwiftCart: Checkout at the speed of now</title>
+  <meta name="description" content="SwiftCart helps independent stores launch fast, beautiful checkout experiences in minutes.">
+  <meta property="og:title" content="SwiftCart">
+  <meta property="og:description" content="Fast, beautiful checkout for independent stores.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <img src="/favicon.svg" width="28" height="28" alt="">
+        SwiftCart
+      </a>
+      <nav class="links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="#waitlist" class="btn btn-small">Join waitlist</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="pill">Now in private beta</span>
+        <h1>Checkout at the<br><span class="grad">speed of now.</span></h1>
+        <p class="lead">SwiftCart gives independent stores a fast, beautiful checkout in minutes. No dev team, no bloated plugins, just more completed orders.</p>
+        <div class="cta-row">
+          <a href="#waitlist" class="btn">Get early access</a>
+          <a href="#how" class="btn btn-ghost">See how it works &rarr;</a>
+        </div>
+        <div class="stats">
+          <div><strong>&lt;1s</strong><span>checkout load</span></div>
+          <div><strong>3 clicks</strong><span>to purchase</span></div>
+          <div><strong>5 min</strong><span>to go live</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Everything you need to sell faster</h2>
+        <div class="grid">
+          <article class="card"><div class="icon">⚡</div><h3>Lightning checkout</h3><p>Edge-served pages that load instantly anywhere in the world.</p></article>
+          <article class="card"><div class="icon">🛒</div><h3>Smart carts</h3><p>Persistent carts and one-tap reorders that bring buyers back.</p></article>
+          <article class="card"><div class="icon">💳</div><h3>Every way to pay</h3><p>Cards, wallets and local payment methods out of the box.</p></article>
+          <article class="card"><div class="icon">📊</div><h3>Clear analytics</h3><p>See where shoppers drop off and fix it with one click.</p></article>
+          <article class="card"><div class="icon">🔒</div><h3>Secure by default</h3><p>Built on a global network with modern security baked in.</p></article>
+          <article class="card"><div class="icon">🔌</div><h3>Plug into anything</h3><p>Drop a snippet into any site, or use our API.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <div class="container">
+        <h2>Live in three steps</h2>
+        <ol class="steps">
+          <li><span>1</span><h3>Connect your store</h3><p>Import products from a CSV or your existing platform.</p></li>
+          <li><span>2</span><h3>Brand your checkout</h3><p>Pick your colors and logo. Preview it live.</p></li>
+          <li><span>3</span><h3>Start selling</h3><p>Share a link or embed the button. That's it.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Simple pricing</h2>
+        <div class="pricing">
+          <div class="plan"><h3>Starter</h3><p class="price">$0<small>/mo</small></p><ul><li>Up to 50 orders/mo</li><li>Hosted checkout</li><li>Email support</li></ul></div>
+          <div class="plan featured"><span class="tag">Most popular</span><h3>Growth</h3><p class="price">$29<small>/mo</small></p><ul><li>Unlimited orders</li><li>Custom domain</li><li>Analytics dashboard</li></ul></div>
+          <div class="plan"><h3>Scale</h3><p class="price">Custom</p><ul><li>Volume pricing</li><li>Dedicated support</li><li>SLA &amp; API access</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="waitlist" class="section cta">
+      <div class="container narrow">
+        <h2>Be first in line</h2>
+        <p>Join the waitlist and get three months of Growth free at launch.</p>
+        <form class="waitlist" id="waitlist-form">
+          <input type="email" name="email" required placeholder="you@store.com" aria-label="Email address">
+          <button class="btn" type="submit">Join waitlist</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; <span id="y"></span> SwiftCart</span>
+      <span>Made for independent sellers.</span>
+    </div>
+  </footer>
+  <script src="/main.js"></script>
+</body>
+</html>
