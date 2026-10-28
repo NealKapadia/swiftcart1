@@ -10,86 +10,139 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="nav">
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="/" class="logo">
-        <img src="/favicon.svg" width="28" height="28" alt="">
-        SwiftCart
-      </a>
+      <a href="#top" class="logo"><img src="/favicon.svg" width="30" height="30" alt="">SwiftCart</a>
       <nav class="links">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a href="#waitlist" class="btn btn-small">Join waitlist</a>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <span class="pill">Now in private beta</span>
-        <h1>Checkout at the<br><span class="grad">speed of now.</span></h1>
-        <p class="lead">SwiftCart gives independent stores a fast, beautiful checkout in minutes. No dev team, no bloated plugins, just more completed orders.</p>
-        <div class="cta-row">
-          <a href="#waitlist" class="btn">Get early access</a>
-          <a href="#how" class="btn btn-ghost">See how it works &rarr;</a>
+      <div class="blob b1" data-speed="0.25"></div>
+      <div class="blob b2" data-speed="-0.15"></div>
+      <div class="blob b3" data-speed="0.4"></div>
+      <div class="container hero-inner">
+        <span class="pill reveal">🚀 Now in private beta</span>
+        <h1 class="reveal" style="--d:.1s">Checkout at the<br>
+          <span class="rotator"><span class="grad" id="rotator">speed of now.</span></span>
+        </h1>
+        <p class="lead reveal" style="--d:.2s">SwiftCart gives independent stores a fast, beautiful checkout in minutes. No dev team, no bloated plugins, just more completed orders.</p>
+        <div class="cta-row reveal" style="--d:.3s">
+          <a href="#waitlist" class="btn magnetic">Get early access</a>
+          <a href="#how" class="btn btn-ghost">See how it works &darr;</a>
         </div>
+
+        <div class="cart-track reveal" style="--d:.4s" aria-hidden="true">
+          <div class="cart" id="cart">
+            <svg viewBox="0 0 64 48" width="64" height="48"><path d="M4 6h8l6 26h32l6-20H16" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle class="wheel" cx="22" cy="41" r="4.5" fill="currentColor"/><circle class="wheel" cx="46" cy="41" r="4.5" fill="currentColor"/></svg>
+            <span class="trail"></span>
+          </div>
+        </div>
+
         <div class="stats">
-          <div><strong>&lt;1s</strong><span>checkout load</span></div>
-          <div><strong>3 clicks</strong><span>to purchase</span></div>
-          <div><strong>5 min</strong><span>to go live</span></div>
+          <div class="reveal" style="--d:.1s"><strong><span data-count="0.8" data-decimals="1">0</span>s</strong><span>avg. checkout load</span></div>
+          <div class="reveal" style="--d:.2s"><strong><span data-count="3">0</span> clicks</strong><span>to purchase</span></div>
+          <div class="reveal" style="--d:.3s"><strong>+<span data-count="27">0</span>%</strong><span>more completed orders*</span></div>
+          <div class="reveal" style="--d:.4s"><strong><span data-count="5">0</span> min</strong><span>to go live</span></div>
         </div>
       </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>⚡ Lightning fast</span><span>🛒 Smart carts</span><span>💳 Every way to pay</span><span>📊 Real analytics</span><span>🔒 Secure by default</span><span>🌍 Global edge</span>
+        <span>⚡ Lightning fast</span><span>🛒 Smart carts</span><span>💳 Every way to pay</span><span>📊 Real analytics</span><span>🔒 Secure by default</span><span>🌍 Global edge</span>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
     <section id="features" class="section">
       <div class="container">
-        <h2>Everything you need to sell faster</h2>
+        <p class="eyebrow reveal">Features</p>
+        <h2 class="reveal">Everything you need to sell faster</h2>
         <div class="grid">
-          <article class="card"><div class="icon">⚡</div><h3>Lightning checkout</h3><p>Edge-served pages that load instantly anywhere in the world.</p></article>
-          <article class="card"><div class="icon">🛒</div><h3>Smart carts</h3><p>Persistent carts and one-tap reorders that bring buyers back.</p></article>
-          <article class="card"><div class="icon">💳</div><h3>Every way to pay</h3><p>Cards, wallets and local payment methods out of the box.</p></article>
-          <article class="card"><div class="icon">📊</div><h3>Clear analytics</h3><p>See where shoppers drop off and fix it with one click.</p></article>
-          <article class="card"><div class="icon">🔒</div><h3>Secure by default</h3><p>Built on a global network with modern security baked in.</p></article>
-          <article class="card"><div class="icon">🔌</div><h3>Plug into anything</h3><p>Drop a snippet into any site, or use our API.</p></article>
+          <article class="card tilt reveal" style="--d:0s"><div class="icon">⚡</div><h3>Lightning checkout</h3><p>Edge-served pages that load instantly anywhere in the world.</p></article>
+          <article class="card tilt reveal" style="--d:.08s"><div class="icon">🛒</div><h3>Smart carts</h3><p>Persistent carts and one-tap reorders that bring buyers back.</p></article>
+          <article class="card tilt reveal" style="--d:.16s"><div class="icon">💳</div><h3>Every way to pay</h3><p>Cards, wallets and local payment methods out of the box.</p></article>
+          <article class="card tilt reveal" style="--d:.24s"><div class="icon">📊</div><h3>Clear analytics</h3><p>See where shoppers drop off and fix it with one click.</p></article>
+          <article class="card tilt reveal" style="--d:.32s"><div class="icon">🔒</div><h3>Secure by default</h3><p>Built on a global network with modern security baked in.</p></article>
+          <article class="card tilt reveal" style="--d:.4s"><div class="icon">🔌</div><h3>Plug into anything</h3><p>Drop a snippet into any site, or use our API.</p></article>
         </div>
       </div>
     </section>
 
+    <!-- HOW IT WORKS (scroll story) -->
     <section id="how" class="section alt">
       <div class="container">
-        <h2>Live in three steps</h2>
-        <ol class="steps">
-          <li><span>1</span><h3>Connect your store</h3><p>Import products from a CSV or your existing platform.</p></li>
-          <li><span>2</span><h3>Brand your checkout</h3><p>Pick your colors and logo. Preview it live.</p></li>
-          <li><span>3</span><h3>Start selling</h3><p>Share a link or embed the button. That's it.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <div class="container">
-        <h2>Simple pricing</h2>
-        <div class="pricing">
-          <div class="plan"><h3>Starter</h3><p class="price">$0<small>/mo</small></p><ul><li>Up to 50 orders/mo</li><li>Hosted checkout</li><li>Email support</li></ul></div>
-          <div class="plan featured"><span class="tag">Most popular</span><h3>Growth</h3><p class="price">$29<small>/mo</small></p><ul><li>Unlimited orders</li><li>Custom domain</li><li>Analytics dashboard</li></ul></div>
-          <div class="plan"><h3>Scale</h3><p class="price">Custom</p><ul><li>Volume pricing</li><li>Dedicated support</li><li>SLA &amp; API access</li></ul></div>
+        <p class="eyebrow reveal">How it works</p>
+        <h2 class="reveal">Live in three steps</h2>
+        <div class="timeline" id="timeline">
+          <div class="timeline-line"><div class="timeline-fill" id="timeline-fill"></div></div>
+          <div class="step reveal from-left"><span class="dot">1</span><div><h3>Connect your store</h3><p>Import products from a CSV or your existing platform in a couple of clicks.</p></div></div>
+          <div class="step reveal from-right"><span class="dot">2</span><div><h3>Brand your checkout</h3><p>Pick your colors, fonts and logo. Watch the preview update live.</p></div></div>
+          <div class="step reveal from-left"><span class="dot">3</span><div><h3>Start selling</h3><p>Share a link or embed the button anywhere. That's genuinely it.</p></div></div>
         </div>
       </div>
     </section>
 
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Pricing</p>
+        <h2 class="reveal">Simple, honest pricing</h2>
+        <div class="pricing">
+          <div class="plan reveal pop" style="--d:0s"><h3>Starter</h3><p class="price">$0<small>/mo</small></p><ul><li>Up to 50 orders/mo</li><li>Hosted checkout</li><li>Email support</li></ul><a href="#waitlist" class="btn btn-ghost full">Start free</a></div>
+          <div class="plan featured reveal pop" style="--d:.1s"><span class="tag">Most popular</span><h3>Growth</h3><p class="price">$29<small>/mo</small></p><ul><li>Unlimited orders</li><li>Custom domain</li><li>Analytics dashboard</li></ul><a href="#waitlist" class="btn full">Join waitlist</a></div>
+          <div class="plan reveal pop" style="--d:.2s"><h3>Scale</h3><p class="price">Custom</p><ul><li>Volume pricing</li><li>Dedicated support</li><li>SLA &amp; API access</li></ul><a href="#contact" class="btn btn-ghost full">Talk to us</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAITLIST -->
     <section id="waitlist" class="section cta">
       <div class="container narrow">
-        <h2>Be first in line</h2>
-        <p>Join the waitlist and get three months of Growth free at launch.</p>
-        <form class="waitlist" id="waitlist-form">
+        <h2 class="reveal">Be first in line</h2>
+        <p class="reveal" style="--d:.1s">Join the waitlist and get three months of Growth free at launch.</p>
+        <form class="waitlist reveal" style="--d:.2s" id="waitlist-form">
           <input type="email" name="email" required placeholder="you@store.com" aria-label="Email address">
           <button class="btn" type="submit">Join waitlist</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact">
+        <div class="contact-copy reveal from-left">
+          <p class="eyebrow">Contact</p>
+          <h2>Say hello 👋</h2>
+          <p>Questions, partnerships, or just want to talk checkout? Drop a note and we'll get back to you quickly.</p>
+          <div class="email-card">
+            <a href="mailto:bankimbhavsar@yahoo.com" class="email-link">bankimbhavsar@yahoo.com</a>
+            <button type="button" class="copy-btn" id="copy-email" data-email="bankimbhavsar@yahoo.com">Copy</button>
+          </div>
+        </div>
+        <form class="contact-form reveal from-right" id="contact-form">
+          <label>Name<input name="name" required placeholder="Your name"></label>
+          <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+          <label>Message<textarea name="message" rows="5" required placeholder="What's on your mind?"></textarea></label>
+          <button class="btn full" type="submit">Send message ✉️</button>
+          <p class="form-note">Opens your email app with your message ready to send.</p>
         </form>
       </div>
     </section>
@@ -98,9 +151,11 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span>&copy; <span id="y"></span> SwiftCart</span>
-      <span>Made for independent sellers.</span>
+      <span>* Illustrative figure. Made for independent sellers.</span>
+      <a href="#top" class="to-top">Back to top &uarr;</a>
     </div>
   </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="/main.js"></script>
 </body>
 </html>
