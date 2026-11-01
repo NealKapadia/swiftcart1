@@ -22,39 +22,18 @@
     }
   });
 
-  const contactForm = $('#contact-form');
-  const submitBtn = $('#contact-submit');
-  const status = $('#form-status');
-  const setStatus = (text, kind = '') => {
-    status.textContent = text;
-    status.className = `form-note ${kind}`.trim();
-  };
-
-  contactForm.addEventListener('submit', async (event) => {
+  $('#contact-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    const data = Object.fromEntries(new FormData(contactForm));
-    const label = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    setStatus('');
+    const form = new FormData(event.target);
+    const subject = encodeURIComponent(`SwiftCart question from ${form.get('name')}`);
+    const body = encodeURIComponent(`${form.get('message')}\n\nFrom: ${form.get('name')} <${form.get('email')}>`);
+    const mailto = `mailto:CustomerService@swiftcart1.com?subject=${subject}&body=${body}`;
+    const fallback = $('#mailto-fallback');
+    fallback.href = mailto;
+    fallback.hidden = false;
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-      const result = await res.json().catch(() => ({}));
-      if (!res.ok || !result.ok) throw new Error(result.error || 'Something went wrong. Please try again.');
-
-      contactForm.reset();
-      setStatus("Thanks! Your message was sent. We'll be in touch soon.", 'ok');
-      showToast('Message sent ✅');
-    } catch (err) {
-      setStatus(err.message || 'Something went wrong. Please try again.', 'err');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = label;
-    }
+    // Use a real link click so the browser can hand the mailto URL to the OS.
+    fallback.click();
+    showToast('Opening your email app…');
   });
 })();

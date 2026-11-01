@@ -49,13 +49,12 @@
         </div>
 
         <form class="contact-form" id="contact-form">
-          <label>Name<input name="name" required maxlength="100" placeholder="Your name"></label>
-          <label>Email<input name="email" type="email" required maxlength="200" placeholder="you@example.com"></label>
-          <label>Message<textarea name="message" rows="4" required maxlength="5000" placeholder="How can we help?"></textarea></label>
-          <!-- Honeypot field for bots; hidden from real visitors -->
-          <label class="hp" aria-hidden="true">Company<input name="company" tabindex="-1" autocomplete="off"></label>
-          <button class="btn full" type="submit" id="contact-submit">Send question ✉️</button>
-          <p class="form-note" id="form-status" role="status" aria-live="polite">We usually reply within one business day.</p>
+          <label>Name<input name="name" required placeholder="Your name"></label>
+          <label>Email<input name="email" type="email" required placeholder="you@example.com"></label>
+          <label>Message<textarea name="message" rows="4" required placeholder="How can we help?"></textarea></label>
+          <button class="btn full" type="submit">Send question ✉️</button>
+          <p class="form-note">Opens your email app with your message ready to send.</p>
+          <a class="mailto-fallback" id="mailto-fallback" hidden target="_blank" rel="noopener">Open the email app manually</a>
         </form>
       </section>
     </div>

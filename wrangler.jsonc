@@ -1,23 +1,10 @@
 {
   "name": "swiftcart1",
-  "main": "src/worker.js",
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./public",
-    "binding": "ASSETS",
-    "not_found_handling": "404-page",
-    // Send /api/* to the Worker; everything else is served as static files.
-    "run_worker_first": ["/api/*"]
+    "not_found_handling": "404-page"
   },
-  "observability": { "enabled": true },
-  "vars": {
-    // Sender address. The domain must be verified in Resend (resend.com/domains).
-    "CONTACT_FROM": "website@swiftcart1.com",
-    // Where contact-form messages are delivered (your GoDaddy mailbox).
-    "CONTACT_TO": "CustomerService@swiftcart1.com"
-  },
-  // Secret (not stored in git): RESEND_API_KEY, set in the Cloudflare dashboard
-  // under Workers & Pages -> swiftcart1 -> Settings -> Variables and Secrets.
   "routes": [
     { "pattern": "swiftcart1.com", "custom_domain": true },
     { "pattern": "www.swiftcart1.com", "custom_domain": true }

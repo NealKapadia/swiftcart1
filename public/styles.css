@@ -78,9 +78,3 @@ input:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 
   *,*::before,*::after{transition:none!important}
   html{scroll-behavior:auto}
 }
-
-/* Contact form states */
-.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
-.btn[disabled]{opacity:.65;cursor:wait;transform:none}
-.form-note.ok{color:#34d399;font-weight:600}
-.form-note.err{color:#f87171;font-weight:600}
