@@ -27,7 +27,7 @@
     const form = new FormData(event.target);
     const subject = encodeURIComponent(`SwiftCart question from ${form.get('name')}`);
     const body = encodeURIComponent(`${form.get('message')}\n\nFrom: ${form.get('name')} <${form.get('email')}>`);
-    const mailto = `mailto:bankimbhavsar@yahoo.com?subject=${subject}&body=${body}`;
+    const mailto = `mailto:CustomerService@swiftcart1.com?subject=${subject}&body=${body}`;
     const fallback = $('#mailto-fallback');
     fallback.href = mailto;
     fallback.hidden = false;
